@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin panel</title>
+  <script>try{if(sessionStorage.getItem("wipe-arrive")){sessionStorage.removeItem("wipe-arrive");document.documentElement.classList.add("wipe-arrive")}}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/transition.css">
+</head>
+<body>
+  <div id="wipe" aria-hidden="true"><div class="w-dark"></div><canvas class="w-embers"></canvas><div class="w-center"><div class="w-brand"><img src="img/logo.png" alt=""><div class="w-bar"><i></i></div></div></div></div>
+  <header class="topbar">
+    <div class="container">
+      <a class="brand" href="admin.html"><img src="img/logo.png" alt="Hank's BBQ"><span id="brand">Admin</span></a>
+      <div class="actions" style="margin-left:auto">
+        <a class="btn ghost sm" href="index.html" style="text-decoration:none" data-wipe>View shop</a>
+        <button class="btn ghost sm hidden" id="logoutBtn">Log out</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- login gate -->
+  <main class="container" id="gate" style="max-width:420px;margin-top:60px">
+    <div class="panel">
+      <h2>Staff login</h2>
+      <form id="loginForm">
+        <label for="aUser">Phone number</label><input id="aUser" type="tel" autocomplete="tel" inputmode="tel" required>
+        <label for="aPass">Password</label><input id="aPass" type="password" autocomplete="current-password" required>
+        <div class="err" id="loginErr"></div>
+        <button class="btn" style="width:100%;margin-top:6px">Log in</button>
+      </form>
+      <p class="hint">The first admin is created with <code>create_admin.py</code> (see backend/README). After that, an admin can promote staff from the Users tab.</p>
+    </div>
+  </main>
+
+  <!-- dashboard -->
+  <main class="container hidden" id="dash">
+    <div class="admin-nav" id="nav">
+      <button data-tab="orders" class="active">Orders <span id="newCount"></span></button>
+      <button data-tab="menu">Menu items</button>
+      <button data-tab="categories">Categories</button>
+      <button data-tab="branches">Branches</button>
+      <button data-tab="users">Users</button>
+    </div>
+    <section id="tab-orders"></section>
+    <section id="tab-menu" class="hidden"></section>
+    <section id="tab-categories" class="hidden"></section>
+    <section id="tab-branches" class="hidden"></section>
+    <section id="tab-users" class="hidden"></section>
+  </main>
+
+  <div class="overlay" id="overlay"></div>
+  <!-- product editor -->
+  <div class="modal" id="productModal" role="dialog" aria-modal="true">
+    <header><h2 id="pmTitle">Menu item</h2><button class="x" data-close aria-label="Close">×</button></header>
+    <div class="content">
+      <form id="productForm">
+        <div style="display:flex;gap:10px">
+          <div style="flex:1"><label for="pNameEn">Name (English)</label><input id="pNameEn" type="text" maxlength="150"></div>
+          <div style="flex:1"><label for="pNameAr">Name (Arabic)</label><input id="pNameAr" type="text" maxlength="150" dir="rtl"></div>
+        </div>
+        <label for="pCat">Category</label><select id="pCat" required></select>
+        <label>Available at</label>
+        <div class="branch-pick" id="pBranches" style="display:flex;flex-wrap:wrap;gap:8px 20px;margin:4px 0 10px"></div>
+        <p class="hint" style="margin:0 0 6px">Tick the branches that carry this. Customers only see it after choosing one of them.</p>
+        <div style="display:flex;gap:10px">
+          <div style="flex:1"><label for="pDescEn">Description (English)</label><textarea id="pDescEn" maxlength="300"></textarea></div>
+          <div style="flex:1"><label for="pDescAr">Description (Arabic)</label><textarea id="pDescAr" maxlength="300" dir="rtl"></textarea></div>
+        </div>
+        <div style="display:flex;gap:10px">
+          <div style="flex:1"><label for="pPrice">Price (LL)</label><input id="pPrice" type="number" step="1" min="0" required></div>
+          <div style="flex:1"><label for="pOld">Old price (offers, LL)</label><input id="pOld" type="number" step="1" min="0" placeholder="optional"></div>
+        </div>
+        <label for="pFile">Photo</label>
+        <input id="pFile" type="file" accept="image/png,image/jpeg,image/webp,image/gif">
+        <img id="pPreview" class="preview hidden" alt="">
+        <button type="button" class="btn ghost sm hidden" id="pRemoveImg" style="margin-top:6px">Remove photo</button>
+        <label class="switch" style="margin-top:14px"><input id="pAvail" type="checkbox" checked> Available to order</label>
+        <div class="err" id="pErr"></div>
+        <button class="btn" id="pSave" style="width:100%;margin-top:6px">Save</button>
+      </form>
+    </div>
+  </div>
+  <!-- category editor -->
+  <div class="modal" id="categoryModal" role="dialog" aria-modal="true">
+    <header><h2 id="cmTitle">Category</h2><button class="x" data-close aria-label="Close">×</button></header>
+    <div class="content">
+      <form id="categoryForm">
+        <div style="display:flex;gap:10px">
+          <div style="flex:1"><label for="cNameEn">Name (English)</label><input id="cNameEn" type="text" maxlength="120"></div>
+          <div style="flex:1"><label for="cNameAr">Name (Arabic)</label><input id="cNameAr" type="text" maxlength="120" dir="rtl"></div>
+        </div>
+        <label for="cOrder">Position on the menu (0 is first)</label><input id="cOrder" type="number" value="0">
+        <label for="cFile">Photo (shown on the shop's category tiles)</label>
+        <input id="cFile" type="file" accept="image/png,image/jpeg,image/webp,image/gif">
+        <img id="cPreview" class="preview hidden" alt="">
+        <button type="button" class="btn ghost sm hidden" id="cRemoveImg" style="margin-top:6px">Remove photo</button>
+        <label>Available at</label>
+        <div class="branch-pick" id="cBranches" style="display:flex;flex-wrap:wrap;gap:8px 20px;margin:4px 0 10px"></div>
+        <p class="hint" style="margin:0 0 6px">Tick the branches that carry this. Customers only see it after choosing one of them.</p>
+        <div class="err" id="cErr"></div>
+        <button class="btn" style="width:100%;margin-top:6px">Save</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- branch editor -->
+  <div class="modal" id="branchModal" role="dialog" aria-modal="true">
+    <header><h2 id="bmTitle">Branch</h2><button class="x" data-close aria-label="Close">×</button></header>
+    <div class="content">
+      <form id="branchForm">
+        <div style="display:flex;gap:10px">
+          <div style="flex:1"><label for="bNameEn">Name (English)</label><input id="bNameEn" type="text" maxlength="120"></div>
+          <div style="flex:1"><label for="bNameAr">Name (Arabic)</label><input id="bNameAr" type="text" maxlength="120" dir="rtl"></div>
+        </div>
+        <label for="bWa">WhatsApp number (country code + number, digits only)</label>
+        <input id="bWa" type="tel" inputmode="tel" placeholder="96170123456">
+        <div style="display:flex;gap:10px">
+          <div style="flex:1"><label for="bAddrEn">Address (English)</label><input id="bAddrEn" type="text" maxlength="200"></div>
+          <div style="flex:1"><label for="bAddrAr">Address (Arabic)</label><input id="bAddrAr" type="text" maxlength="200" dir="rtl"></div>
+        </div>
+        <label for="bOrder">Position (0 is first)</label><input id="bOrder" type="number" value="0">
+        <label class="switch" style="margin-top:14px"><input id="bActive" type="checkbox" checked> Shown to customers</label>
+        <div class="err" id="bErr"></div>
+        <button class="btn" style="width:100%;margin-top:6px">Save</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/admin.js"></script>
+  <script src="js/transition.js"></script>
+</body>
+</html>

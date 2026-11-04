@@ -1,0 +1,22 @@
+# Secrets and private data -- never commit or upload these
+.env
+*.env
+!.env.example
+backend/.env
+backend/backups/
+*.dump
+*.sql
+
+# Python environments
+venv/
+.venv/
+backend/.venv/
+__pycache__/
+*.pyc
+
+# OS / editor
+.DS_Store
+Thumbs.db
+__MACOSX/
+.idea/
+.vscode/

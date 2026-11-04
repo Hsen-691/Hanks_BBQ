@@ -1,0 +1,175 @@
+Name your photo file EXACTLY like one of these (English OR Arabic) + .jpg/.png/.webp
+e.g.  Chicken Burger.jpg   or   تشكن برغر.png
+============================================================
+
+
+# Offers
+2 Chicken Burgers + Fries   |   ٢ تشكن برغر + بطاطا
+4 Chicken Burgers   |   ٤ تشكن برغر
+2 Cheese Beef Burgers + Fries   |   ٢ تشيز برغر لحمة + بطاطا
+2 Lebanese Beef Burgers + Fries   |   ٢ برغر لبناني لحمة + بطاطا
+3 Hanks Beef + 2 Chicken Hanks   |   ٣ هانكس لحمة + ٢ هانكس دجاج
+4 Mozzarella Burgers (Chicken or Beef)   |   ٤ برغر موزاريلا (دجاج أو لحمة)
+2 Cheese Beef Burgers + 1 Chicken Burger   |   ٢ تشيز برغر لحمة + ١ تشكن برغر
+1 Chicken Burger + 1 Cheese Burger + Fries   |   ١ تشكن برغر + ١ تشيز برغر + بطاطا
+Chicken Breast + Cheese + Chicken Burger   |   تشكن بريست + تشيز + تشكن برغر
+5 Lebanese Burgers   |   ٥ برغر لبناني
+Zinger + Fahita   |   زنجر + فاهيتا
+Offer 2 Zinger   |   عرض ٢ زنجر
+Offer 3 Zinger   |   عرض ٣ زنجر
+Zinger + Combo (Potato + Salad + Soft Drink)   |   زنجر + كومبو (بطاطا + سلطة + مشروب)
+Zinger + Chicken Sub   |   زنجر + تشكن ساب
+1 Hotdog   |   ١ هوت دوغ
+4 Hotdogs   |   ٤ هوت دوغ
+2 Hotdogs + 1 Cheese Beef Burger   |   ٢ هوت دوغ + ١ تشيز برغر لحمة
+1 Hotdog + 1 Chicken Burger + Fries   |   ١ هوت دوغ + ١ تشكن برغر + بطاطا
+2 Hotdogs + 2 Chicken Burgers   |   ٢ هوت دوغ + ٢ تشكن برغر
+3 Hanks Beef Burgers   |   ٣ برغر هانكس لحمة
+3 Chicken Hanks   |   ٣ تشكن هانكس
+2 Chicken Hanks + Fries   |   ٢ تشكن هانكس + بطاطا
+2 Hanks Beef Burgers + Fries   |   ٢ برغر هانكس لحمة + بطاطا
+BBQ Burger + Combo (Salad + Potato + Pepsi)   |   برغر باربيكيو + كومبو (سلطة + بطاطا + بيبسي)
+Tshakin Halloum + Combo (Potato + Pepsi + Salad)   |   تشكن حلوم + كومبو (بطاطا + بيبسي + سلطة)
+
+# Premium Burgers
+Chicken Burger   |   تشكن برغر
+Chicken Breast Burger   |   تشكن بريست برغر
+Hanks Chicken Burger   |   هانكس تشكن برغر
+Hanks Beef Burger   |   هانكس بيف برغر
+Beef Mozzarella Burger   |   برغر موزاريلا لحمة
+Chicken Mozzarella Burger   |   برغر موزاريلا دجاج
+BBQ Burger   |   برغر باربيكيو
+Zinger Burger   |   زنجر برغر
+Big Hanks Burger   |   بيغ هانكس برغر
+Lady Hanks Burger   |   ليدي هانكس برغر
+Crunchy Spiced Burger   |   كرانشي سبايسد برغر
+Swiss Mushroom Burger   |   سويس مشروم برغر
+Chicken Halloum Burger   |   تشكن حلوم برغر
+Beef Halloum Burger   |   بيف حلوم برغر
+Lebanese Beef Burger   |   برغر لبناني لحمة
+Classic Burger   |   كلاسيك برغر
+Buffalo Burger   |   بافلو برغر
+Escalope Burger   |   اسكالوب برغر
+
+# Sandwiches
+Fahita   |   فاهيتا
+Chicken Sub   |   تشكن ساب
+Chicken Avoca   |   تشكن أفوكا
+Steak Sub   |   ستيك ساب
+Mexicana   |   مكسيكانا
+Fish Fillet   |   سمك فيليه
+Sujuk   |   سجق
+Makanek   |   مقانق
+Potato Sandwich   |   بطاطا سندويش
+Tuna   |   تونا
+Philadelphia   |   فيلادلفيا
+Jaysh w Jebneh   |   حيش وجبنة
+Francesco   |   فرانسيسكو
+Crispy   |   كريسبي
+Cajun   |   كايجن
+Crab   |   كراب
+Shrimp   |   قريدس
+Shrimp Pane   |   قريدس بانيه
+Escalope   |   اسكالوب
+Chicken Pesto   |   تشكن بيستو
+Tawook   |   طاووق
+Chinese   |   تشاينيز
+Shrimp & Chicken   |   قريدس ودجاج
+Hotdog   |   هوت دوغ
+Shrimp & Crab   |   قريدس وكراب
+Shrimp with Greens   |   قريدس مع خضرة
+Rosto   |   روستو
+Spicy Fish   |   سمكة حرة
+Liver   |   سودة
+Chicken   |   دجاج
+Tshakin Curry   |   تشكن كاري
+
+# Shawarma
+Chicken Turkish Shawarma Sandwich   |   سندويش شاورما تركي دجاج
+Meat Turkish Shawarma Sandwich   |   سندويش شاورما تركي لحمة
+Mix Turkish Shawarma Sandwich   |   سندويش شاورما تركي ميكس
+Chicken Shawarma Sandwich (Small)   |   سندويش شاورما دجاج صغير
+Chicken Shawarma Sandwich (Large)   |   سندويش شاورما دجاج كبير
+Chicken Shawarma Mrakak   |   سندويش شاورما دجاج مرقوق
+Meat Shawarma Sandwich (Small)   |   سندويش شاورما لحمة صغير
+Meat Shawarma Sandwich (Large)   |   سندويش شاورما لحمة كبير
+Meat Shawarma Mrakak   |   سندويش شاورما لحمة مرقوق
+Chicken Shawarma Meal   |   وجبة شاورما دجاج
+Meat Shawarma Meal   |   وجبة شاورما لحمة
+Chicken Shawarma Double Meal   |   وجبة شاورما دجاج دوبل
+Meat Shawarma Double Meal   |   وجبة شاورما لحمة دوبل
+Mix Double Shawarma Meal   |   وجبة شاورما دوبل ميكس
+Chicken Shawarma Faret 200g Meal   |   وجبة شاورما فرط دجاج ٢٠٠ غرام
+Meat Shawarma Faret 200g Meal   |   وجبة شاورما فرط لحمة ٢٠٠ غرام
+Mix Shawarma Faret Meal   |   وجبة شاورما فرط مشكل
+Half Kilo Chicken Shawarma + Fries   |   نص كيلو شاورما دجاج مع بطاطا
+Half Kilo Meat Shawarma + Fries   |   نص كيلو شاورما لحمة مع بطاطا
+Kilo Chicken Shawarma + Fries   |   كيلو شاورما دجاج مع بطاطا
+Kilo Meat Shawarma + Fries   |   كيلو شاورما لحمة مع بطاطا
+3 Chicken Shawarma (Small)   |   ٣ شاورما دجاج صغار
+4 Chicken Shawarma (Large)   |   ٤ شاورما دجاج كبار
+2 Meat Shawarma (Small)   |   ٢ شاورما لحمة صغار
+3 Meat Shawarma (Large)   |   ٣ شاورما لحمة كبار
+Chicken Shawarma Rocket (Large Bread)   |   صاروخ شاورما دجاج خبز عربي كبير
+Meat Shawarma Rocket (Large Bread)   |   صاروخ شاورما لحمة خبز عربي كبير
+
+# Wraps
+Twister   |   تويستر
+Chicken Avoca Wrap   |   تشكن أفوكا راب
+Chicken Swiss Mushroom Wrap   |   تشكن سويس مشروم راب
+Beef Swiss Mushroom Wrap   |   بيف سويس مشروم راب
+Buffalo Wrap   |   بافلو راب
+Chicken Barbecue Wrap   |   تشكن باربيكيو راب
+Mexican Wrap   |   مكسيكان راب
+1 Twister + 1 Boneless   |   ١ تويستر + ١ بونلس
+Hanks Tournedo   |   هانكس تورنيدو
+
+# Platters
+Chicken Stroganoff with Rice   |   صحن ستروغانوف دجاج مع رز
+Beef Stroganoff with Rice   |   صحن ستروغانوف لحمة مع رز
+Chicken Curry with Rice   |   صحن شيكن كاري مع رز
+Light Chicken Plate   |   صحن لايت شيكن
+Steak Mushroom Plate   |   صحن ستيك مشروم
+Chicken Mushroom Plate   |   صحن شيكن مشروم
+Shrimp 12 pcs Plate   |   صحن قريدس ١٢ قطعة
+Fish Fillet 3 pcs Plate   |   صحن فيليه سمك ٣ قطع
+Chicken Tawook Skewers Plate   |   صحن طاووق سيخين
+Escalope Plate   |   صحن اسكالوب
+Chicken Quesadilla Meal   |   وجبة كاساديا دجاج
+Beef Quesadilla Meal   |   وجبة كاساديا لحمة
+Shrimp with Greens Plate   |   صحن قريدس مع خضرة
+Boiled Shrimp Plate   |   صحن قريدس مسلوق
+
+# Fried Chicken
+Half Broasted Chicken (4 pcs)   |   نص فروج بروستد ٤ قطع
+Broasted Chicken (8 pcs)   |   فروج بروستد ٨ قطع
+Whole Broasted Chicken   |   فروج بروستد كامل
+Crispy Meal (3 pcs)   |   وجبة كرسبي ٣ قطع
+Crispy Meal (5 pcs)   |   وجبة كرسبي ٥ قطع
+Crispy Meal (8 pcs)   |   وجبة كرسبي ٨ قطع
+
+# Pasta
+4 Cheese Pasta   |   باستا ٤ أجبان
+Fettuccine Alfredo Pasta   |   باستا فيتوتشيني ألفريدو
+Pesto Pasta   |   باستا بيستو
+Shrimp Pasta   |   باستا قريدس
+
+# Salads
+Rocca Salad   |   سلطة روكا
+Fattouch   |   فتوش
+Tabouleh   |   تبولة
+Chicken Caesar Salad   |   سلطة سيزر دجاج
+Crab Salad   |   سلطة كراب
+Hanks Salad   |   سلطة هانكس
+Tuna Salad   |   سلطة تونا
+
+# Wings & Nuggets
+Fried Wings (8 pcs)   |   جوانح مقلية ٨ قطع
+Fried Wings (15 pcs)   |   جوانح مقلية ١٥ قطعة
+Fried Wings (30 pcs)   |   جوانح مقلية ٣٠ قطعة
+Nuggets (5 pcs)   |   ناغتس ٥ قطع
+
+# Appetizers
+Grape Leaves with Greens   |   ورق عنب بخضرة
+Moutabal Hummus   |   متبل حمص
+Moutabal Beetroot & Eggplant   |   متبل باتنجان شمندر

@@ -1,0 +1,61 @@
+/* "Call me" hand: flies out of the cart button when an item is added, in time with the Hala walla sound.
+   Colours are written out on purpose (the site's --ink flips to light in the dark theme). */
+.callme{position:fixed;z-index:130;direction:ltr;display:flex;align-items:flex-end;pointer-events:none;visibility:hidden;
+  transform-origin:var(--ox,50%) var(--oy,50%);will-change:transform}
+.callme.side-r{flex-direction:row-reverse}
+.callme.side-l{flex-direction:row}
+.callme.go{visibility:visible;animation:cmFly 1.8s both}
+/* out of the cart, a springy pop, a hold while it wags, then back into the cart */
+@keyframes cmFly{
+  0%{transform:translate(var(--dx,0),var(--dy,0)) scale(.08) rotate(-28deg);opacity:0;animation-timing-function:cubic-bezier(.2,1.4,.35,1)}
+  5%{opacity:1}
+  16%{transform:none}
+  76%{transform:none;opacity:1;animation-timing-function:cubic-bezier(.65,0,.9,.5)}
+  96%{opacity:1}
+  100%{transform:translate(var(--dx,0),var(--dy,0)) scale(.08) rotate(26deg);opacity:0}
+}
+
+.cm-hand{display:block;width:clamp(104px,17vw,172px);height:auto;overflow:visible;transform-origin:50% 90%;rotate:-5deg;
+  filter:drop-shadow(0 10px 12px rgba(0,0,0,.55))}
+.go .cm-hand{animation:cmWag .26s steps(1,end) .2s 4 both}
+/* two poses flipped like a flick book, 4 flips x .26s = the length of the sound */
+@keyframes cmWag{0%{rotate:var(--w1,-17deg)}50%{rotate:var(--w2,8deg)}100%{rotate:var(--w0,-5deg)}}
+
+.cm-ring path{fill:none;stroke:#f2c400;stroke-width:7;stroke-linecap:round}
+
+/* the owner's real hand (transparent cut-out) */
+.cm-photo{position:relative;width:clamp(128px,21vw,210px);filter:none;transform-origin:62% 88%;--w1:-13deg;--w2:7deg;--w0:-3deg;rotate:-3deg}
+.cm-pic{display:block;filter:drop-shadow(6px 7px 0 #d42a20) drop-shadow(0 12px 14px rgba(0,0,0,.5))}
+/* the wrist end dissolves, and the shadow dissolves with it */
+.cm-photo img{display:block;width:100%;height:auto;-webkit-mask-image:linear-gradient(#000 78%,transparent 99%);mask-image:linear-gradient(#000 78%,transparent 99%)}
+.cm-photo svg{position:absolute;left:0;top:0;width:100%;height:100%;overflow:visible}
+.cm-photo .cm-ring path{stroke-width:10}
+.cm-ring.a,.cm-ring.b{opacity:0}
+.go .cm-ring.a{animation:cmBlinkA .26s steps(1,end) .2s 4 both}
+.go .cm-ring.b{animation:cmBlinkB .26s steps(1,end) .2s 4 both}
+@keyframes cmBlinkA{0%{opacity:1}50%{opacity:0}100%{opacity:0}}
+@keyframes cmBlinkB{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+
+.cm-bubble{position:relative;align-self:center;margin-bottom:46px;padding:.38em .8em .3em;
+  background:#f5eee3;color:#130e0d;border:3px solid #130e0d;border-radius:14px;box-shadow:5px 5px 0 #d42a20;
+  font-family:"Alfa Slab One","Cairo","Rockwell","Arial Black",Georgia,serif;font-size:clamp(.95rem,3.3vw,1.4rem);line-height:1.1;white-space:nowrap;
+  scale:0;rotate:-4deg}
+.cm-bubble::after{content:"";position:absolute;top:50%;width:16px;height:16px;margin-top:-8px;background:#f5eee3;transform:rotate(45deg)}
+/* the tail points at the hand, whichever side of the screen the cart is on */
+.side-r .cm-bubble{margin-right:12px;transform-origin:100% 70%}
+.side-r .cm-bubble::after{right:-11px;border-top:3px solid #130e0d;border-right:3px solid #130e0d}
+.side-l .cm-bubble{margin-left:12px;transform-origin:0 70%}
+.side-l .cm-bubble::after{left:-11px;border-left:3px solid #130e0d;border-bottom:3px solid #130e0d}
+html[dir="rtl"] .cm-bubble{direction:rtl}
+.callme[data-mode="photo"].side-r .cm-bubble{margin-right:36px}
+.callme[data-mode="photo"].side-l .cm-bubble{margin-left:36px}
+.cm-bubble b{color:#d42a20;font-weight:400}
+.go .cm-bubble{animation:cmPop .38s .22s cubic-bezier(.3,1.7,.5,1) both,cmJig .26s steps(1,end) .6s 3 both}
+@keyframes cmPop{from{scale:0}to{scale:1}}
+@keyframes cmJig{0%{rotate:-6deg}50%{rotate:-2deg}100%{rotate:-4deg}}
+
+/* the cart button rings like a phone at the same moment */
+.cart-btn.ringing svg{transform-origin:50% 15%;animation:cmRing .13s steps(1,end) 8}
+@keyframes cmRing{0%{rotate:-16deg}50%{rotate:16deg}100%{rotate:0deg}}
+
+@media (prefers-reduced-motion:reduce){.callme{display:none}.cart-btn.ringing svg{animation:none}}
