@@ -1,0 +1,14 @@
+# Never upload these to Vercel (same rules as .gitignore)
+.env
+*.env
+!.env.example
+backend/.env
+backend/backups/
+*.dump
+*.sql
+venv/
+.venv/
+backend/.venv/
+__pycache__/
+*.pyc
+backend/backend/

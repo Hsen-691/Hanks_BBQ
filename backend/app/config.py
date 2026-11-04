@@ -12,7 +12,7 @@ import hashlib
 import os
 from pathlib import Path
 
-from pydantic import model_validator
+from pydantic import field_validator, model_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -64,6 +64,14 @@ class Settings(BaseSettings):
     @property
     def cors_origin_list(self) -> list[str]:
         return [o.strip() for o in self.cors_origins.split(",") if o.strip()]
+
+    @field_validator("database_url")
+    @classmethod
+    def _sqlalchemy_url(cls, v: str) -> str:
+        # Hosted Postgres (Neon / Vercel) hands out postgres:// URLs; SQLAlchemy needs postgresql://
+        if v.startswith("postgres://"):
+            return "postgresql+psycopg2://" + v[len("postgres://"):]
+        return v
 
     @model_validator(mode="after")
     def _check_security(self) -> "Settings":

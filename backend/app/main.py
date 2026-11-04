@@ -35,7 +35,7 @@ from .routers import (
 #   <root>/backend/app/main.py  ->  <root>
 UI_DIR = Path(__file__).resolve().parents[2]
 
-MAX_BODY_BYTES = 6 * 1024 * 1024  # 5 MB image + multipart overhead; nothing else is big
+MAX_BODY_BYTES = 4_500_000  # 4 MB image + multipart overhead; also Vercel's hard request limit
 
 docs_on = settings.docs_enabled
 app = FastAPI(
